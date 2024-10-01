@@ -63,3 +63,8 @@ compinit -u
 # GO SETTINGS
 export GOPATH=$HOME/.go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+# GITIGNORE CLI
+function gi() {
+  curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;
+}
