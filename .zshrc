@@ -68,3 +68,7 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 function gi() {
   curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;
 }
+
+# >>> xmake >>>
+test -f "/home/mckatoo/.xmake/profile" && source "/home/mckatoo/.xmake/profile"
+# <<< xmake <<<
