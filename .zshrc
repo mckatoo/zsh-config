@@ -72,3 +72,6 @@ function gi() {
 # >>> xmake >>>
 test -f "/home/mckatoo/.xmake/profile" && source "/home/mckatoo/.xmake/profile"
 # <<< xmake <<<
+
+# HISTORY CONFIG
+test -f "$HOME/history.zsh" && source "$HOME/history.zsh"
