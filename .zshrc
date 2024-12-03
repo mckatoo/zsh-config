@@ -26,7 +26,7 @@ fpath=(${ASDF_DIR}/completions $fpath)
 bindkey "\e[1;5C" forward-word
 bindkey "\e[1;5D" backward-word
 
-export PATH="$PATH:/opt/nvim-linux64/bin:/home/mckatoo/.local/bin:/home/mckatoo/.zig"
+export PATH="$PATH:/opt/nvim-linux64/bin:/home/mckatoo/.local/bin:/home/mckatoo/.zig:/opt/JetBrains_Rider-2024.3/bin:/opt/idea-IC-243.21565.193/bin"
 
 autoload -U compinit
 compinit -i
