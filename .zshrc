@@ -8,15 +8,15 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # ZIG-SHELL-COMPLETIONS
-fpath+=($HOME/.zsh/zig-shell-completions)
+# fpath+=($HOME/.zsh/zig-shell-completions)
 
 # POETRY
-fpath+=~/.zfunc
+# fpath+=~/.zfunc
 
 # NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # ASDF
 . "$HOME/.asdf/asdf.sh"
@@ -26,11 +26,10 @@ fpath=(${ASDF_DIR}/completions $fpath)
 bindkey "\e[1;5C" forward-word
 bindkey "\e[1;5D" backward-word
 
-export PATH="$PATH:/opt/nvim-linux64/bin:/home/mckatoo/.local/bin:/home/mckatoo/.zig:/opt/JetBrains_Rider-2024.3/bin:/opt/idea-IC-243.21565.193/bin"
+# export PATH="$PATH:/opt/nvim-linux64/bin:/home/mckatoo/.local/bin:/home/mckatoo/.zig:/opt/JetBrains_Rider-2024.3/bin:/opt/idea-IC-243.21565.193/bin"
 
-autoload -U compinit
-compinit -i
-autoload -Uz compinit && compinit
+# autoload -U compinit
+# compinit -i
 
 # ZSH-SYNTAX-HIGHLIGHTING
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -52,17 +51,17 @@ source $HOME/.aliases
 source $HOME/.zsh/npm/npm-completion.zsh
 
 # DENO PATH
-export DENO_INSTALL="/home/mckatoo/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+# export DENO_INSTALL="/home/mckatoo/.deno"
+# export PATH="$DENO_INSTALL/bin:$PATH"
 
 # DENO COMPLETION
-fpath=(~/.zsh $fpath)
-autoload -Uz compinit
-compinit -u
+# fpath=(~/.zsh $fpath)
+# autoload -Uz compinit
+# compinit -u
 
 # GO SETTINGS
-export GOPATH=$HOME/.go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+# export GOPATH=$HOME/.go
+# export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # GITIGNORE CLI
 function gi() {
@@ -75,3 +74,5 @@ test -f "/home/mckatoo/.xmake/profile" && source "/home/mckatoo/.xmake/profile"
 
 # HISTORY CONFIG
 test -f "$HOME/history.zsh" && source "$HOME/history.zsh"
+
+autoload -Uz compinit && compinit
