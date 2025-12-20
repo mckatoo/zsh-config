@@ -19,14 +19,15 @@ prompt pure
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # ASDF
-. "$HOME/.asdf/asdf.sh"
-fpath=(${ASDF_DIR}/completions $fpath)
+# . "$HOME/.asdf/asdf.sh"
+# fpath=(${ASDF_DIR}/completions $fpath)
 
 # FIX ARROW KEYS
 bindkey "\e[1;5C" forward-word
 bindkey "\e[1;5D" backward-word
 
-# export PATH="$PATH:/opt/nvim-linux64/bin:/home/mckatoo/.local/bin:/home/mckatoo/.zig:/opt/JetBrains_Rider-2024.3/bin:/opt/idea-IC-243.21565.193/bin"
+# LVIM
+export PATH="$PATH:$HOME/.local/bin"
 
 # autoload -U compinit
 # compinit -i
@@ -35,16 +36,18 @@ bindkey "\e[1;5D" backward-word
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ZSH-AUTOSUGGESTIONS
-# source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 # fpath=($HOME/.zsh/zsh-completions/src $fpath)
 
 # ZSH-HISTORY-SUBSTRING-SEARCH
 source $HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
-bindkey "${key[Up]}" history-substring-search-up
-bindkey "${key[Down]}" history-substring-search-down
+# bindkey "${key[Up]}" history-substring-search-up
+# bindkey "${key[Down]}" history-substring-search-down
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # ZSH-AUTOCOMPLETE
 # source $HOME/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
@@ -80,7 +83,7 @@ function gi() {
 }
 
 # LOAD APIKEYS
-source $HOME/api_keys.zsh
+# source $HOME/api_keys.zsh
 
 # >>> xmake >>>
 test -f "/home/mckatoo/.xmake/profile" && source "/home/mckatoo/.xmake/profile"
@@ -90,3 +93,10 @@ test -f "/home/mckatoo/.xmake/profile" && source "/home/mckatoo/.xmake/profile"
 test -f "$HOME/history.zsh" && source "$HOME/history.zsh"
 
 autoload -Uz compinit && compinit
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# CUSTOM SCRIPTS
+source $HOME/.scripts/*.sh
