@@ -140,3 +140,5 @@ alias gpfwl='git push --force-with-lease'
 alias l='exa -l'
 alias la='exa -l -a'
 alias bat='batcat'
+
+alias nv='nvim'
