@@ -1,0 +1,5 @@
+[user]
+	email = mckatoo@gmail.com
+	name = Milton Carlos Katoo
+[core]
+	editor = nvim
