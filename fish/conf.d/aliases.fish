@@ -1,1 +1,1 @@
-source ~/.aliases
+source ~/.shell-config/.aliases
